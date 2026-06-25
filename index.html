@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Academic workshop on belief updating and polarisation, bringing together computational, empirical, and theoretical perspectives.">
+  <meta name="keywords"
+    content="belief revision, belief updating, belief polarisation, rationality, computational modelling, political psychology, epistemic trust">
+  <title>Rational Revision? Belief Updating and Polarisation Workshop</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet/Icons (using basic SVG paths embedded directly for lightweight loading) -->
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo-text" id="nav-logo">Rational Revision Workshop</a>
+
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links-list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#speakers" class="nav-link">Speakers</a></li>
+        <!-- <li><a href="#schedule" class="nav-link">Schedule</a></li> -->
+        <li><a href="#submissions" class="nav-link">Submissions</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <!-- Abstract graphical SVG background representing belief distributions/polarization -->
+    <svg class="hero-diagram" width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+      <!-- Left Normal Distribution -->
+      <path d="M 50 350 Q 200 350 250 200 T 300 350 Q 320 350 350 350" fill="none" stroke="#115e59" stroke-width="2"
+        stroke-dasharray="5 5" />
+      <path d="M 50 350 Q 150 350 180 150 T 250 350 Q 320 350 350 350" fill="none" stroke="#115e59" stroke-width="3" />
+
+      <!-- Right Normal Distribution (Diverging) -->
+      <path d="M 450 350 Q 480 350 550 200 T 750 350" fill="none" stroke="#115e59" stroke-width="2"
+        stroke-dasharray="5 5" />
+      <path d="M 450 350 Q 550 350 620 150 T 750 350" fill="none" stroke="#115e59" stroke-width="3" />
+
+      <!-- Connecting and diverging arrows -->
+      <!-- <path d="M 400 150 L 320 100 M 400 150 L 480 100" fill="none" stroke="#115e59" stroke-width="1.5"
+        marker-end="url(#arrow)" />
+      <path d="M 280 220 C 350 220 450 220 520 220" fill="none" stroke="#e2e8f0" stroke-width="2" />
+      <circle cx="400" cy="220" r="6" fill="#115e59" /> -->
+    </svg>
+
+    <div class="container">
+      <!-- <span class="hero-tag">Academic Workshop</span> -->
+      <h1 class="hero-title">Rational revision?<br>Bridging computational, empirical, and theoretical perspectives on
+        belief updating and polarisation</h1>
+
+      <div class="hero-meta">
+        <div class="meta-item" id="meta-date">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Wednesday, July 22</span>
+        </div>
+        <div class="meta-item" id="meta-location">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Rio de Janeiro, Brazil @ CogSci 2026</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#about" class="btn btn-primary" id="btn-learn-more">Learn More</a>
+        <a href="#submissions" class="btn btn-secondary" id="btn-submit-proposal">Submit a Poster</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Introduction Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About the Workshop</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            This workshop brings together researchers from cognitive science, philosophy, political science, and
+            psychology to explore how, when, and why people update their beliefs—and why these processes so often lead
+            to belief polarisation. By bridging computational, empirical, and theoretical perspectives, we aim to unify
+            diverse explanations of polarisation (ranging from motivated reasoning and cognitive constraints to rational
+            causal differences) and examine their implications for theories of learning, social epistemology, and
+            epistemic trust.
+          </p>
+        </div>
+
+        <div class="organizers-list">
+          <h3>Organisers</h3>
+
+          <div class="organizer-item">
+            <div class="organizer-name">Rebekah A. Gelpí</div>
+            <div class="organizer-affiliation">Johns Hopkins University<br>University of Toronto</div>
+            <!-- <div class="organizer-bio">Uses computational models to understand social learning and the development of
+              social norms.</div> -->
+          </div>
+
+          <div class="organizer-item">
+            <div class="organizer-name">Daphna Buchsbaum</div>
+            <div class="organizer-affiliation">Brown University</div>
+            <!-- <div class="organizer-bio">Studies belief updating and revision in humans and nonhuman animals using
+              computational models.</div> -->
+          </div>
+
+          <div class="organizer-item">
+            <div class="organizer-name">Jens Koed Madsen</div>
+            <div class="organizer-affiliation">London School of Economics</div>
+            <!-- <div class="organizer-bio">Explores how belief and behaviour impact democratic stability, information
+              fragility, and sustainability.</div> -->
+          </div>
+
+          <div class="organizer-item">
+            <div class="organizer-name">David J. Young</div>
+            <div class="organizer-affiliation">University of Cambridge<br>Birkbeck, University of London</div>
+            <!-- <div class="organizer-bio">Applies theories and methods from cognitive science to political psychology.
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Confirmed Speakers Section -->
+  <section id="speakers">
+    <div class="container">
+      <h2 class="section-title">Confirmed Speakers</h2>
+
+      <div class="speakers-grid">
+        <!-- Laura Globig -->
+        <div class="speaker-card">
+          <div class="speaker-header">
+            <span class="speaker-role">Presenter</span>
+            <div class="speaker-name">Laura K. Globig</div>
+            <div class="speaker-affiliation">New York University</div>
+          </div>
+          <p class="speaker-desc">Cognitive neuroscientist studying how reward motivations shape decision-making in
+            technology-mediated environments.</p>
+          <div class="speaker-topic">How AI can circumvent bias in information-seeking</div>
+        </div>
+
+        <!-- Manikya Alister -->
+        <div class="speaker-card">
+          <div class="speaker-header">
+            <span class="speaker-role">Presenter</span>
+            <div class="speaker-name">Manikya Alister</div>
+            <div class="speaker-affiliation">UC Berkeley</div>
+          </div>
+          <p class="speaker-desc">Postdoctoral scholar broadly interested in how and why people learn from other people.
+          </p>
+          <div class="speaker-topic">Understanding online polarisation using a custom social media platform</div>
+        </div>
+
+        <!-- Gordon Brown -->
+        <div class="speaker-card">
+          <div class="speaker-header">
+            <span class="speaker-role">Presenter</span>
+            <div class="speaker-name">Gordon Brown</div>
+            <div class="speaker-affiliation">University of Warwick</div>
+          </div>
+          <p class="speaker-desc">Professor of Psychology with interests in behavioral science, agent-based modelling of
+            social influence, and political polarisation.</p>
+          <div class="speaker-topic">The importance of out-group differentiation in issue alignment and polarisation
+          </div>
+        </div>
+
+        <!-- Arthur Prat-Carrabin -->
+        <div class="speaker-card">
+          <div class="speaker-header">
+            <span class="speaker-role">Presenter</span>
+            <div class="speaker-name">Arthur Prat-Carrabin</div>
+            <div class="speaker-affiliation">Harvard University</div>
+          </div>
+          <p class="speaker-desc">Postdoctoral researcher interested in the cognitive and neural mechanisms underlying
+            perception, representation, inference, and decision-making.</p>
+          <div class="speaker-topic">Computational models of belief imprecision</div>
+        </div>
+
+        <!-- David Lagnado -->
+        <div class="speaker-card">
+          <div class="speaker-header">
+            <span class="speaker-role">Presenter</span>
+            <div class="speaker-name">David Lagnado</div>
+            <div class="speaker-affiliation">University College London</div>
+          </div>
+          <p class="speaker-desc">Professor of Cognitive and Decision Science working on causal reasoning, belief
+            updating, and decision making.</p>
+          <div class="speaker-topic">The causal dynamics of belief change</div>
+        </div>
+
+        <!-- Joaquin Navajas -->
+        <div class="speaker-card">
+          <div class="speaker-header">
+            <span class="speaker-role">Moderator</span>
+            <div class="speaker-name">Joaquin Navajas</div>
+            <div class="speaker-affiliation">Universidad Torcuato Di Tella</div>
+          </div>
+          <p class="speaker-desc">Associate Professor seeking to understand social influence on judgements, beliefs, and
+            political polarisation.</p>
+          <div class="speaker-topic">Guiding the panel discussions on common workshop themes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <!-- <section id="schedule">
+    <div class="container">
+      <h2 class="section-title">Proposed Schedule</h2>
+
+      <div class="schedule-table-container">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th style="width: 25%">Session & Presenter</th>
+              <th style="width: 75%">Topic / Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="session-presenter">Laura Globig</span>
+                <span class="session-affiliation">NYU</span>
+              </td>
+              <td><span class="session-title-text">How AI can circumvent bias in information-seeking</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="session-presenter">Manikya Alister</span>
+                <span class="session-affiliation">UC Berkeley</span>
+              </td>
+              <td><span class="session-title-text">Understanding online polarisation using a custom social media
+                  platform</span></td>
+            </tr>
+            <tr class="session-special">
+              <td>Panel Discussion</td>
+              <td>All Presenters &bull; Moderated by Joaquin Navajas</td>
+            </tr>
+            <tr class="session-special">
+              <td>Lunch Break</td>
+              <td>Midday recess</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="session-presenter">Gordon Brown</span>
+                <span class="session-affiliation">University of Warwick</span>
+              </td>
+              <td><span class="session-title-text">The importance of out-group differentiation in issue alignment and
+                  polarisation</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="session-presenter">Arthur Prat-Carrabin</span>
+                <span class="session-affiliation">Harvard University</span>
+              </td>
+              <td><span class="session-title-text">Computational models of belief imprecision</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="session-presenter">David Lagnado</span>
+                <span class="session-affiliation">UCL</span>
+              </td>
+              <td><span class="session-title-text">The causal dynamics of belief change</span></td>
+            </tr>
+            <tr class="session-special">
+              <td>Panel Discussion</td>
+              <td>All Presenters &bull; Moderated by Joaquin Navajas</td>
+            </tr>
+            <tr class="session-special">
+              <td>Break & Poster Session</td>
+              <td>Coffee break and poster presentations</td>
+            </tr>
+            <tr class="session-special">
+              <td>Panel Discussion</td>
+              <td>All Presenters &bull; Moderated by Joaquin Navajas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Submissions Section -->
+  <section id="submissions">
+    <div class="container">
+      <div class="submission-card">
+        <h3>Call for Posters & Flash Talks</h3>
+        <p>
+          We invite submissions for posters and flash talks highlighting new theoretical, computational, or empirical
+          research touching on the topics of belief change, updating, and polarisation. We also welcome submissions for
+          posters that have been accepted at the main conference that are relevant to the themes of the workshop.
+        </p>
+        <a href="#" class="btn btn-primary" id="btn-submit-form"
+          onclick="alert('This is a placeholder link. The submission form will be available soon!'); return false;">Submit
+          Your Proposal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>Rational Revision Workshop</h4>
+          <p>
+            A workshop at the 2026 Annual Meeting of the Cognitive Science Society.
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact & Inquiries</h4>
+          <p>For questions regarding the workshop or submissions, please contact:</p>
+          <p><strong>Email:</strong> <a href="mailto:rebekah@jhu.edu">rebekah@jhu.edu</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rational Revision Workshop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
